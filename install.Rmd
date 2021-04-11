@@ -1,0 +1,38 @@
+---
+title: "Met_analyses_installation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Create an environment
+
+```{r}
+renv::init()
+```
+
+## If XML lib fails in ubuntu
+```{r}
+Error installing package 'XML':
+```
+```{bash}
+sudo apt-get update
+sudo apt-get install libxml2-dev
+
+```
+try again and chose to restore from the locfile if prompted.
+
+```{r}
+renv::init()
+```
+```{r}
+library(preproc)
+library(MetaQC)
+library(MetaDE)
+library(MetaPath)
+library(MetaDCN)
+```
+
+
