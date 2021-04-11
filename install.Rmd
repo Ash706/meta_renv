@@ -10,12 +10,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Create an environment
 
 ```{r}
+install.packages("renv")
 renv::init()
 ```
 
 ## If XML lib fails in ubuntu
-```{r}
-Error installing package 'XML':
+
+If you get following error "Error installing package 'XML':"
+
+go to terminal and run following commands
 ```
 ```{bash}
 sudo apt-get update
